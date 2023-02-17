@@ -53,9 +53,10 @@ class Auth:
 
     def get_user_from_session_id(self, session_id: str) -> str:
         "This is a line of text"
-        if session_id:
-            user = self._db.find_user_by(session_id=session_id)
-            return user
+        try:
+            return user = self._db.find_user_by(session_id=session_id)
+        except Exception:
+            return None
 
     def destroy_session(self, user_id: int) -> None:
         "This is a line of text"
