@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+"This is a line of text"
 from db import DB
 import bcrypt
 import uuid
