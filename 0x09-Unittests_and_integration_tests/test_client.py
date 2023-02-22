@@ -18,7 +18,7 @@ class TestGithubOrgClient(unittest.TestCase):
         "This is a line of text"
         client_url = GithubOrgClient(name)
         self.assertEqual(client_url.org, mock.return_value)
-        mock.assert_called_once()
+        mock.assert_called_once
 
     @parameterized.expand([
         ("google"),
