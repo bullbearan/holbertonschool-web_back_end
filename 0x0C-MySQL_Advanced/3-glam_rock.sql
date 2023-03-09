@@ -1,2 +1,2 @@
 -- This isa a line of text
-SELECT band_name, COALESCE(split, 2020) - formed as lifespan FROM metal_bands WHERE style LIKE "%Glam rock%";
+SELECT band_name, IFNULL(split, 2020) - IFNULL(formed, 0) as lifespan FROM metal_bands WHERE style LIKE "%Glam rock%";
